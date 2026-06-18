@@ -133,7 +133,7 @@ export default function Component() {
               variant="outline"
               className="border-white bg-transparent text-white hover:bg-white/20 hover:text-white px-8 py-6 text-lg"
             >
-              Learn Me
+              Learn More
             </Button>
           </div>
         </div>
