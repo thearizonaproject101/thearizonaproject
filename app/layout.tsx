@@ -12,7 +12,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arizona Project",
+  title: " The Arizona Project",
   description: "Fighting for lower costs lunches in the State of Arizona",
   icons: {
     icon: "/phoenixbg.png",
