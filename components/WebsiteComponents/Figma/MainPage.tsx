@@ -40,10 +40,16 @@ export default function Component() {
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-2">
-              <Heart className="w-7 h-7 text-orange-500 fill-orange-500" />
-              <span className="text-xl text-gray-900">The Arizona Project</span>
-            </div>
+            <a href="/" className="flex items-center gap-3">
+              <img
+                src="/phoenixbg.png"
+                alt="The Arizona Project logo"
+                className="size-11 rounded-full object-cover"
+              />
+              <span className="text-lg font-semibold tracking-tight text-gray-900">
+                The Arizona Project
+              </span>
+            </a>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
@@ -99,7 +105,7 @@ export default function Component() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden mt-16">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ImageWithFallback 
                       src="https://images.unsplash.com/photo-1556543365-e08680c86612?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGRpdmVyc2UlMjBzdHVkZW50cyUyMGVhdGluZyUyMGx1bmNoJTIwc2Nob29sfGVufDF8fHx8MTc3ODk2NzM2MXww&ixlib=rb-4.1.0&q=80&w=1080"
@@ -125,9 +131,9 @@ export default function Component() {
             <Button 
               onClick={() => scrollToSection('about')}
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg"
+              className="border-white bg-transparent text-white hover:bg-white/20 hover:text-white px-8 py-6 text-lg"
             >
-              Learn More
+              Learn Me
             </Button>
           </div>
         </div>
@@ -136,6 +142,9 @@ export default function Component() {
       {/* Stats Section */}
       <section className="py-16 bg-orange-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center text-white mb-10">
+            <p className="text-3xl md:text-4xl font-semibold">We hope to...</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
             <div>
               <div className="text-5xl mb-2">1,000+</div>
@@ -365,7 +374,11 @@ export default function Component() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">
-              <Heart className="w-6 h-6 text-orange-500 fill-orange-500" />
+              <img
+                src="/phoenixbg.png"
+                alt="The Arizona Project phoenix logo"
+                className="w-6 h-6 rounded-full object-cover"
+              />
               <span className="text-lg text-white">The Arizona Project</span>
             </div>
             <div className="flex gap-8">
@@ -386,7 +399,7 @@ export default function Component() {
               </button>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <div className="text-lg font-semibold tracking-tight text-gray-900">
             <p>© 2026 The Arizona Project. All rights reserved.</p>
           </div>
         </div>
