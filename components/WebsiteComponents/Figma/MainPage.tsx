@@ -307,15 +307,15 @@ export default function Component() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl mb-2">$25</div>
+              <div className="text-3xl mb-2">$15</div>
               <div className="text-orange-100">Feeds 5 students</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl mb-2">$50</div>
+              <div className="text-3xl mb-2">$30</div>
               <div className="text-orange-100">Feeds 10 students</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl mb-2">$100</div>
+              <div className="text-3xl mb-2">$60</div>
               <div className="text-orange-100">Feeds 20 students</div>
             </div>
           </div>
@@ -335,66 +335,90 @@ export default function Component() {
             </p>
           </div>
 
-          <div className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="border-orange-200 shadow-lg">
-                <CardContent className="pt-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-orange-500" />
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card className="border-orange-200 shadow-lg">
+                  <CardContent className="pt-8">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Mail className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl mb-2 text-gray-900">Email</h3>
+                        <a href="mailto:thearizonaprojectinfo@gmail.com" className="text-orange-500 hover:text-orange-600 transition-colors">
+                          thearizonaprojectinfo@gmail.com
+                        </a>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl mb-2 text-gray-900">Email</h3>
-                      <a href="mailto:thearizonaprojectinfo@gmail.com" className="text-orange-500 hover:text-orange-600 transition-colors">
-                        thearizonaprojectinfo@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
 
-              <Card className="border-orange-200 shadow-lg">
-                <CardContent className="pt-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-orange-500" />
+                <Card className="border-orange-200 shadow-lg">
+                  <CardContent className="pt-8">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <Phone className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl mb-2 text-gray-900">Phone</h3>
+                        <a href="tel:4803997143" className="text-orange-500 hover:text-orange-600 transition-colors">
+                          (480) 399-7143
+                        </a>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl mb-2 text-gray-900">Phone</h3>
-                      <a href="tel:4803997143" className="text-orange-500 hover:text-orange-600 transition-colors">
-                        (480) 399-7143
-                      </a>
-                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
+                <p className="text-sm uppercase tracking-[0.3em] text-gray-500">Mailing List</p>
+                <h3 className="mt-3 text-2xl font-semibold text-gray-900">Join our updates</h3>
+                <p className="mt-4 text-gray-600">
+                  Leave your information below and we’ll keep you posted on the latest project news, volunteer opportunities, and impact stories.
+                </p>
+                <form className="mt-8 space-y-6">
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <label className="flex flex-col gap-2 text-sm font-medium text-gray-900">
+                      Name
+                      <Input name="name" type="text" placeholder="Your name" />
+                    </label>
+                    <label className="flex flex-col gap-2 text-sm font-medium text-gray-900">
+                      Email
+                      <Input name="email" type="email" placeholder="you@example.com" />
+                    </label>
                   </div>
-                </CardContent>
-              </Card>
+                  <label className="flex flex-col gap-2 text-sm font-medium text-gray-900">
+                    Message
+                    <Textarea name="message" placeholder="Tell us what you'd like to know" rows={5} />
+                  </label>
+                  <Button type="submit" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-8 py-4">
+                    Join the list
+                  </Button>
+                </form>
+              </div>
             </div>
 
-            <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.3em] text-gray-500">Mailing List</p>
-              <h3 className="mt-3 text-2xl font-semibold text-gray-900">Join our updates</h3>
-              <p className="mt-4 text-gray-600">
-                Leave your information below and we’ll keep you posted on the latest project news, volunteer opportunities, and impact stories.
+            <div className="rounded-3xl border border-orange-200 bg-orange-50 p-8 shadow-lg">
+              <h3 className="text-3xl font-semibold text-gray-900 mb-4">Reach out anytime</h3>
+              <p className="text-gray-700 leading-8">
+                Whether you want to donate, volunteer, or learn more about our work,
+                we're here to answer your questions.
               </p>
-              <form className="mt-8 space-y-6">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <label className="flex flex-col gap-2 text-sm font-medium text-gray-900">
-                    Name
-                    <Input name="name" type="text" placeholder="Your name" />
-                  </label>
-                  <label className="flex flex-col gap-2 text-sm font-medium text-gray-900">
-                    Email
-                    <Input name="email" type="email" placeholder="you@example.com" />
-                  </label>
+              <div className="mt-8 space-y-4 text-gray-800">
+                <div>
+                  <h4 className="text-sm uppercase tracking-[0.3em] text-gray-500">Email</h4>
+                  <a href="mailto:thearizonaprojectinfo@gmail.com" className="text-lg font-medium text-orange-600 hover:text-orange-700">
+                    thearizonaprojectinfo@gmail.com
+                  </a>
                 </div>
-                <label className="flex flex-col gap-2 text-sm font-medium text-gray-900">
-                  Message
-                  <Textarea name="message" placeholder="Tell us what you'd like to know" rows={5} />
-                </label>
-                <Button type="submit" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-8 py-4">
-                  Join the list
-                </Button>
-              </form>
+                <div>
+                  <h4 className="text-sm uppercase tracking-[0.3em] text-gray-500">Phone</h4>
+                  <a href="tel:4803997143" className="text-lg font-medium text-orange-600 hover:text-orange-700">
+                    (480) 399-7143
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
