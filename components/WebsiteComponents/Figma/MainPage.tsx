@@ -335,13 +335,13 @@ export default function Component() {
             </p>
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-8">
+          <div className="grid gap-10 justify-center">
+            <div className="space-y-8 mx-auto max-w-4xl">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card className="border-orange-200 shadow-lg">
-                  <CardContent className="pt-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CardContent className="pt-8 text-center">
+                    <div className="flex flex-col items-center gap-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
                         <Mail className="w-6 h-6 text-orange-500" />
                       </div>
                       <div>
@@ -355,9 +355,9 @@ export default function Component() {
                 </Card>
 
                 <Card className="border-orange-200 shadow-lg">
-                  <CardContent className="pt-8">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CardContent className="pt-8 text-center">
+                    <div className="flex flex-col items-center gap-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
                         <Phone className="w-6 h-6 text-orange-500" />
                       </div>
                       <div>
@@ -371,8 +371,8 @@ export default function Component() {
                 </Card>
               </div>
 
-              <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.3em] text-gray-500">Mailing List</p>
+              <div className="rounded-3xl border border-orange-200 bg-orange-50/90 p-8 shadow-sm ring-1 ring-orange-200 text-center">
+                <p className="text-sm uppercase tracking-[0.3em] text-orange-600">Mailing List</p>
                 <h3 className="mt-3 text-2xl font-semibold text-gray-900">Join our updates</h3>
                 <p className="mt-4 text-gray-600">
                   Leave your information below and we’ll keep you posted on the latest project news, volunteer opportunities, and impact stories.
@@ -399,27 +399,6 @@ export default function Component() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-orange-200 bg-orange-50 p-8 shadow-lg">
-              <h3 className="text-3xl font-semibold text-gray-900 mb-4">Reach out anytime</h3>
-              <p className="text-gray-700 leading-8">
-                Whether you want to donate, volunteer, or learn more about our work,
-                we're here to answer your questions.
-              </p>
-              <div className="mt-8 space-y-4 text-gray-800">
-                <div>
-                  <h4 className="text-sm uppercase tracking-[0.3em] text-gray-500">Email</h4>
-                  <a href="mailto:thearizonaprojectinfo@gmail.com" className="text-lg font-medium text-orange-600 hover:text-orange-700">
-                    thearizonaprojectinfo@gmail.com
-                  </a>
-                </div>
-                <div>
-                  <h4 className="text-sm uppercase tracking-[0.3em] text-gray-500">Phone</h4>
-                  <a href="tel:4803997143" className="text-lg font-medium text-orange-600 hover:text-orange-700">
-                    (480) 399-7143
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
