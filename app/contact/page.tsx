@@ -1,4 +1,7 @@
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 const officialSite = "https://www.thearizonaproject.com"
 
@@ -16,6 +19,63 @@ export default function ContactPage() {
           Add your preferred contact details, social links, or newsletter
           signup here when you are ready to publish the project publicly.
         </p>
+
+        <div className="mt-10 grid gap-8 lg:grid-cols-[1.35fr_0.85fr]">
+          <div className="rounded-3xl border border-border/60 bg-zinc-50/90 p-8 shadow-sm dark:bg-white/5">
+            <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
+              Mailing list
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight">
+              Stay in the loop
+            </h2>
+            <p className="mt-4 text-base leading-7 text-muted-foreground">
+              Join the Arizona Project mailing list for updates, project notes,
+              and first access to new work.
+            </p>
+
+            <form className="mt-8 space-y-6">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <label className="flex flex-col gap-2 text-sm font-medium text-foreground">
+                  Name
+                  <Input name="name" type="text" placeholder="Your name" />
+                </label>
+                <label className="flex flex-col gap-2 text-sm font-medium text-foreground">
+                  Email
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                  />
+                </label>
+              </div>
+              <label className="flex flex-col gap-2 text-sm font-medium text-foreground">
+                Message
+                <Textarea
+                  name="message"
+                  placeholder="What would you like to hear about?"
+                  rows={5}
+                />
+              </label>
+              <Button type="submit" className="w-full sm:w-auto">
+                Join the list
+              </Button>
+            </form>
+          </div>
+
+          <div className="rounded-3xl border border-border/60 bg-white/80 p-8 shadow-sm backdrop-blur dark:bg-black/60">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Why sign up?
+            </h2>
+            <p className="mt-4 text-base leading-7 text-muted-foreground">
+              Receive curated updates, project previews, and occasional behind-
+              the-scenes notes that match the Arizona Project vibe.
+            </p>
+            <div className="mt-6 rounded-3xl bg-muted p-5 text-sm text-foreground">
+              No spam, no noise — just thoughtful updates and early access to
+              what’s next.
+            </div>
+          </div>
+        </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
